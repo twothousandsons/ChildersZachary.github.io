@@ -1,0 +1,117 @@
+    :root{
+    --main-radius:5px;
+    --main-padding: 5px;
+    --cyan: cyan;
+    --black: black;
+    --red:red;
+}
+body {
+    background-color: white;
+}
+.container{
+
+    color:var(--white);
+
+
+    display: grid;
+    height: 100vh;
+    
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1fr 1fr;
+    gap: 0.5rem;
+
+    grid-template-areas:
+    
+    "nav nav nav nav"
+    "main main article article"
+    "section section section section"
+    "footer footer footer footer"
+
+    ;
+}
+nav{
+   grid-area: nav;
+   display:flex;
+   justify-content: space-between;
+   padding: 5px;
+   background: var(--red);
+   border-radius: var(--main-radius);
+   padding: var(--main-padding);
+   
+}
+nav a{
+    color: var(--white);
+    text-decoration: none;
+}
+main{
+  grid-area:main;
+  display:flex;
+   justify-content: space-between;
+   padding: 5px;
+   background: var(--cyan);
+   border-radius: var(--main-radius);
+   padding: var(--main-padding);
+   
+}
+main img{
+    width: 100px;
+    margin-right: 20px;
+    size:auto;
+
+}
+article{
+    grid-area:article;
+    background: var(--cyan);
+   border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+
+section{
+   grid-area:section;
+    background: var(--cyan);
+   border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+
+footer{
+  grid-area:footer;
+  display:flex;
+    justify-content: center; 
+    
+   background: var(--cyan);
+   border-radius: var(--main-radius);
+   padding: var(--main-padding);
+}
+footer img{
+    width: 100px;
+    margin-right: 20px;
+}
+
+ /*    This is for mobile view    */
+
+ @media only screen and (max-width: 500px){
+
+    /* When the screen is 800 px or less, then do this code instead*/
+   
+
+    .container{
+
+        grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+
+    grid-template-areas:
+    
+    "nav"
+    "main"
+    "article"
+    "section"
+    "footer"
+
+    ;
+    }
+    #sidebar{
+        display: none;
+    }
+ }
