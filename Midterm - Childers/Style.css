@@ -1,0 +1,114 @@
+
+  .container {
+        display: grid;
+        height: 100vh;
+        gap:0.5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        
+        "nav nav nav nav"
+        "main main main main"
+        "section section section section"
+        "footer footer footer footer"
+        
+        
+        ;
+    }
+     header{
+        grid-area: nav;
+        display:flex;
+        justify-content: space-between;
+        padding: 5px;
+        background: blue;
+        border-radius: 5px;
+        
+    }
+    header a{
+        color:white;
+        text-decoration: none;
+    }
+
+
+    body {
+        background-color: azure;
+        
+    }
+    
+
+
+.single_book {
+    background-color: aliceblue;
+    border: solid black 1px;
+    color: black;
+    height: 220px;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    padding: 25px;
+    height:40vh;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: solid black 1px;
+    background: rgb(191, 191, 251);
+}
+main img {
+    margin-left: auto;
+    width: 200px;
+    height: 200px;
+    
+}
+section{
+    grid-area: section;
+    display: flex;
+    height:30vh;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 20px;
+    text-align: center;
+     background: rgb(191, 191, 251);
+}
+section img {
+    
+    height: 250px;
+    width: 200px
+}
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+    padding:10px;
+    border: solid black 1px;
+    height: 30vh;
+    background: rgb(191, 191, 251);
+   
+}
+ @media only screen and (max-width: 900px){
+
+   .container{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr;
+     grid-template-areas: 
+     "nav"
+     "main"
+     "section"
+     "footer"
+   }
+   footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+   }
+
+   
+
+    
+    
+   
+ }
+ 
